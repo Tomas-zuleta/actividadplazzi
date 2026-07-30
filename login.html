@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Platzi - Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="navbar">
+    <div class="logo">
+      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Platzi--Streamline-Simple-Icons" height="24" width="24">
+  <desc>
+    Platzi Streamline Icon: https://streamlinehq.com
+  </desc>
+  <title>Platzi</title>
+  <path d="M10.6392 1.127 2.486 9.282a3.842 3.842 0 0 0 0 5.4361l8.1552 8.1552a3.842 3.842 0 0 0 5.4361 0l2.719 -2.718 -2.719 -2.7181 -2.718 2.718 -8.1562 -8.1551 8.1552 -8.1552 5.437 5.4371 -5.437 5.4361 2.718 2.719 5.4371 -5.437a3.842 3.842 0 0 0 0 -5.4372l-5.448 -5.436a3.828 3.828 0 0 0 -5.4252 0z" fill="#0ECF7B" stroke-width="1"></path>
+</svg>
+      Platzi
+    </div>
+    <div class="search">
+      🔍 <span>¿Qué quieres aprender?</span>
+    </div>
+    <div class="nav-links">
+      <span>Cursos</span>
+      <span>Empresas</span>
+      <span>Blog</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="promo-content">
+      <span class="promo-tag">Promo</span>
+      <h1 class="promo-title">La mejor inversión de tu carrera, hoy con precio especial.</h1>
+
+      <div class="price-line">
+        🇨🇴 $799.900 <span class="savings">Ahorras $199.100</span>
+      </div>
+      <div class="installments">
+        Antes <span class="price-old">$999.000</span> | Paga en 4 cuotas
+      </div>
+
+      <div class="cta-button">
+        <span>Aprovechar Ahora</span>
+        <span>⏱</span>
+      </div>
+
+      <div class="countdown-label">Últimas Horas:</div>
+      <div class="timer">
+        <span>5h</span>
+        <span>27m</span>
+        <span>13s</span>
+      </div>
+    </div>
+
+    <div class="below-hero">
+      <h2>La escuela</h2>
+    </div>
+  </div>
+
+  <div class="login-panel">
+    <button class="close-btn">✕</button>
+
+    <div class="panel-logo">
+      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="Platzi--Streamline-Simple-Icons" height="24" width="24">
+  <desc>
+    Platzi Streamline Icon: https://streamlinehq.com
+  </desc>
+  <title>Platzi</title>
+  <path d="M10.6392 1.127 2.486 9.282a3.842 3.842 0 0 0 0 5.4361l8.1552 8.1552a3.842 3.842 0 0 0 5.4361 0l2.719 -2.718 -2.719 -2.7181 -2.718 2.718 -8.1562 -8.1551 8.1552 -8.1552 5.437 5.4371 -5.437 5.4361 2.718 2.719 5.4371 -5.437a3.842 3.842 0 0 0 0 -5.4372l-5.448 -5.436a3.828 3.828 0 0 0 -5.4252 0z" fill="#0ECF7B" stroke-width="1"></path>
+</svg>
+      Platzi
+    </div>
+
+    <h2 class="panel-title">Ingresa a tu cuenta</h2>
+    <p class="panel-subtitle">¿Primera vez en Platzi? <a href="#">Regístrate</a></p>
+
+    <input class="email-input" type="email" placeholder="Correo electrónico">
+    <a href="index.html" class="continue-btn">Continuar</a>
+
+    <div class="divider">O bien,</div>
+
+    <div class="social-row">
+      <div class="social-btn">
+        <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.6 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.2 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.5 16 18.9 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.2 29.5 4 24 4c-7.5 0-14 4.2-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5.4 0 10.3-2.1 13.9-5.4l-6.4-5.4C29.4 34.7 26.8 36 24 36c-5.3 0-9.7-3.4-11.3-8.1l-6.6 5.1C9.9 39.7 16.4 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.2 5.5l6.4 5.4C39.9 36.5 44 30.9 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+      </div>
+      <div class="social-btn">
+        <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+      </div>
+      <div class="social-btn">
+        <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M16.4 1.9c.1 1.1-.3 2.2-1 3-.7.8-1.9 1.5-3 1.4-.1-1.1.4-2.2 1-3 .7-.8 2-1.4 3-1.4zM20 17.2c-.5 1.2-.8 1.7-1.5 2.7-1 1.4-2.3 3.2-4 3.2-1.5 0-1.9-1-4-1s-2.5 1-4 1c-1.7 0-2.9-1.6-4-3-1.9-2.4-3.4-6.8-1.4-9.8.9-1.5 2.6-2.5 4.3-2.5 1.5 0 2.4 1 3.9 1 1.5 0 2.2-1 4-1 1.5 0 3 .8 4 2.2-3.5 2-2.9 6.8 2.7 8.2z"/></svg>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      ¿Necesitas ayuda?<br>
+      Al continuar, aceptó <a href="#">Términos</a> y <a href="#">Políticas de privacidad.</a>
+    </div>
+
+    <div class="whatsapp-fab">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.2 1 2.4.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.5-.5.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.1.4.2.6.3.7.5.1.2.1.9-.1 1.6z"/></svg>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

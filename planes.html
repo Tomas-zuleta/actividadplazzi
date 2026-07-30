@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes</title>
+    <link rel="stylesheet" href="planes.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__inner">
+      <a href="#" class="logo">
+        <svg class="logo__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="#33D6A6" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        Platzi
+      </a>
+
+      <div class="searchbar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="7" stroke="#8b93a1" stroke-width="2"/>
+          <path d="M21 21L16.65 16.65" stroke="#8b93a1" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input type="text" placeholder="¿Qué quieres aprender?">
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="rutas.html">Rutas</a>
+        <a href="educacion.html">Educacion</a>
+        <a href="colaboradores.html">Colaboradores</a>
+        <a href="planes.html">Planes</a>
+        <a href="login.html">Login</a>
+      </nav>
+
+      <a href="login.html" class="btn btn--primary">Acceder</a>
+    </div>
+  </header>
+
+    <div class="page">
+        <h1 class="title">Elige el plan ideal para ti</h1>
+
+        <div class="toggle-wrap">
+            <div class="toggle">
+                <button id="btn-personas" class="active" onclick="showView('personas')">Personas</button>
+                <button id="btn-empresas" onclick="showView('empresas')">Empresas</button>
+            </div>
+        </div>
+
+        <!-- PERSONAS VIEW -->
+        <div id="view-personas" class="view active">
+            <div class="plans-grid">
+
+                <!-- Plan Basic -->
+                <div class="plan-card">
+                    <div class="plan-head">
+                        <span class="plan-name">Plan Basic</span>
+                        <span class="plan-tag">Mensual</span>
+                    </div>
+                    <div class="plan-audience">Para <strong>1 estudiante</strong></div>
+                    <div class="plan-price"><span class="flag">🇨🇴</span>$179.000<span class="price-period">/mes</span>
+                    </div>
+                    <div class="plan-subnote">Cobro mensual recurrente</div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✔</span>Contenido profesional y actualizado con certificados
+                            digitales</li>
+                        <li class="disabled"><span class="icon cross">✕</span>Certificados físicos para las rutas de
+                            aprendizaje profesional</li>
+                        <li class="disabled"><span class="icon cross">✕</span>Acceso a las escuelas de Startups, Inglés
+                            y liderazgo</li>
+                        <li class="disabled"><span class="icon cross">✕</span>Eventos exclusivos como Platzi Conf</li>
+                        <li class="disabled"><span class="icon cross">✕</span>Descarga contenido en la app móvil</li>
+                    </ul>
+                    <button class="cta-btn">Suscríbete a Plan Basic</button>
+                </div>
+
+                <!-- Plan Expert -->
+                <div class="plan-card featured">
+                    <div class="badge">AHORRAS 7 MESES</div>
+                    <div class="plan-head">
+                        <span class="plan-name">Plan Expert</span>
+                        <span class="plan-tag">Anual</span>
+                    </div>
+                    <div class="plan-audience">Para <strong>1 estudiante</strong></div>
+                    <div class="plan-price"><span class="flag">🇨🇴</span>$999.000<span class="price-period">/año</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✔</span>Contenido profesional y actualizado con certificados
+                            digitales</li>
+                        <li><span class="icon check">✔</span>Certificados físicos para las rutas de aprendizaje
+                            profesional</li>
+                        <li><span class="icon check">✔</span>Acceso a las escuelas de Startups, Inglés y liderazgo</li>
+                        <li><span class="icon check">✔</span>Eventos exclusivos como Platzi Conf</li>
+                        <li><span class="icon check">✔</span>Descarga contenido en la app móvil</li>
+                    </ul>
+                    <button class="cta-btn solid">Suscríbete a Plan Expert</button>
+                    <div class="installments"><span class="info-icon">i</span>Paga a 4 cuotas sin intereses de $249.750
+                    </div>
+                </div>
+
+                <!-- Plan Expert Duo -->
+                <div class="plan-card">
+                    <div class="badge">AHORRAS 8 MESES</div>
+                    <div class="plan-head">
+                        <span class="plan-name">Plan Expert Duo</span>
+                        <span class="plan-tag">Anual</span>
+                    </div>
+                    <div class="plan-audience">Para <strong>2 estudiantes</strong></div>
+                    <div class="plan-price"><span class="flag">🇨🇴</span>$1.499.000<span
+                            class="price-period">/año</span></div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✔</span>Contenido profesional y actualizado con certificados
+                            digitales</li>
+                        <li><span class="icon check">✔</span>Certificados físicos para las rutas de aprendizaje
+                            profesional</li>
+                        <li><span class="icon check">✔</span>Acceso a las escuelas de Startups, Inglés y liderazgo</li>
+                        <li><span class="icon check">✔</span>Eventos exclusivos como Platzi Conf</li>
+                        <li><span class="icon check">✔</span>Descarga contenido en la app móvil</li>
+                    </ul>
+                    <button class="cta-btn">Suscríbete a Plan Expert Duo</button>
+                    <div class="installments"><span class="info-icon">i</span>Paga a 4 cuotas sin intereses de $374.750
+                    </div>
+                </div>
+
+                <!-- Plan Expert Groups -->
+                <div class="plan-card">
+                    <div class="badge">AHORRAS 46 MESES</div>
+                    <div class="plan-head">
+                        <span class="plan-name">Plan Expert Groups</span>
+                        <span class="plan-tag">Anual</span>
+                    </div>
+                    <div class="plan-audience">Para <strong>4-50 estudiantes</strong></div>
+                    <div class="plan-price"><span class="flag">🇨🇴</span><span id="groups-price">$2.002.795</span><span
+                            class="price-period">/año</span></div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✔</span>Contenido profesional y actualizado con certificados
+                            digitales</li>
+                        <li><span class="icon check">✔</span>Certificados físicos para las rutas de aprendizaje
+                            profesional</li>
+                        <li><span class="icon check">✔</span>Acceso a las escuelas de Startups, Inglés y liderazgo</li>
+                        <li><span class="icon check">✔</span>Eventos exclusivos como Platzi Conf</li>
+                        <li><span class="icon check">✔</span>Descarga contenido en la app móvil</li>
+                    </ul>
+                    <div class="qty-control">
+                        <span>Cantidad de estudiantes</span>
+                        <div class="qty-buttons">
+                            <button onclick="changeQty(-1)">−</button>
+                            <span class="qty-value" id="qty-value">4</span>
+                            <button onclick="changeQty(1)">+</button>
+                        </div>
+                    </div>
+                    <button class="cta-btn">Suscríbete a Plan Expert Groups</button>
+                    <div class="installments"><span class="info-icon">i</span>Paga a 4 cuotas sin intereses de
+                        $500.698,75</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- EMPRESAS VIEW -->
+        <div id="view-empresas" class="view">
+            <h1 class="title" style="margin-bottom: 40px;">Calcula el precio de tu plan según los objetivos de tu
+                empresa</h1>
+            <div class="enterprise-wrap">
+                <div class="enterprise-card">
+                    <h2>Enterprise</h2>
+                    <p class="subtitle">Ideal para empresas que necesitan una implementación personalizada.</p>
+                    <div class="icon-badge">$</div>
+                    <p class="callout">¡Más licencias, menor precio!</p>
+                    <button class="cta-btn solid">¡Hablemos!</button>
+                    <ul class="enterprise-features">
+                        <li><span class="icon check">✔</span>Dashboard con reportes por equipos y empleados.</li>
+                        <li><span class="icon check">✔</span>Administra el acceso de tus empleados.</li>
+                        <li><span class="icon check">✔</span>Planes de estudio personalizados, basado en los objetivos
+                            de tu empresa.</li>
+                        <li><span class="icon check">✔</span>Clases en vivo.</li>
+                        <li><span class="icon check">✔</span>Evalúa el conocimiento técnico de tus empleados.</li>
+                        <li><span class="icon check">✔</span>Asistencia personalizada por parte de uno de nuestros
+                            especialistas.</li>
+                        <li><span class="icon check">✔</span>Acceso al API de integraciones.</li>
+                        <li><span class="icon check">✔</span>Acceso con SSO.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footnote">Servicio SaaS excluido de IVA (Art. 476 E.T.)</p>
+        </div>
+
+    </div>
+
+    <script>
+        function showView(view) {
+            document.getElementById('view-personas').classList.toggle('active', view === 'personas');
+            document.getElementById('view-empresas').classList.toggle('active', view === 'empresas');
+            document.getElementById('btn-personas').classList.toggle('active', view === 'personas');
+            document.getElementById('btn-empresas').classList.toggle('active', view === 'empresas');
+        }
+
+        let qty = 4;
+        const basePricePerStudent = 500698.75;
+        function changeQty(delta) {
+            const next = qty + delta;
+            if (next < 4 || next > 50) return;
+            qty = next;
+            document.getElementById('qty-value').textContent = qty;
+            const total = Math.round(basePricePerStudent * qty);
+            document.getElementById('groups-price').textContent = '$' + total.toLocaleString('es-CO');
+        }
+    </script>
+
+</body>
+
+</html>
