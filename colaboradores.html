@@ -73,53 +73,58 @@
   <script>
     // ---- Datos de los profesores/colaboradores ----
     // Reemplaza estos datos y agrega tu propia foto en "photoUrl" (opcional).
-    const teachersData = [
-      {
-        name: "Ana Maria Mesa",
-        role: "Learning Specialist en Endaca",
-        bg: "linear-gradient(135deg, #a56de2, #e6a8d7)",
-        iconBg: "#ec4899",
-        icon: "💬",
-        courseTitle: "Curso Gratis de Estrategias para el Aprendizaje",
-        bio: "Gina se especializa en diseñar experiencias de aprendizaje efectivas para equipos técnicos, combinando pedagogía y tecnología para maximizar la retención de conocimiento."
-      },
-      {
-        name: "Laura Sofia Ulloa ",
-        role: "Senior Solutions Engineer en N8N",
-        bg: "linear-gradient(135deg, #f5a623, #f7c948)",
-        iconBg: "#22c55e",
-        icon: "🤖",
-        courseTitle: "Curso de Automatizaciones con IA",
-        bio: "Idir ayuda a empresas a automatizar procesos complejos usando IA y flujos de trabajo sin código, con años de experiencia implementando soluciones a escala."
-      },
-      {
-        name: "Mariana Cardona ",
-        role: "Especialista en IA",
-        bg: "linear-gradient(135deg, #7dd3fc, #bae6fd)",
-        iconBg: "#f97316",
-        icon: "📊",
-        courseTitle: "Curso de Ciencia de Datos para Análisis de Negocio",
-        bio: "Frida trabaja en la intersección de datos e inteligencia artificial, ayudando a equipos a tomar mejores decisiones a partir de modelos predictivos."
-      },
-      {
-        name: "Didier Londoño ",
-        role: "CPO en Platzi",
-        bg: "linear-gradient(135deg, #fde8d7, #fff1e6)",
-        iconBg: "#14b8a6",
-        icon: "✍️",
-        courseTitle: "Curso de Prompt Engineering",
-        bio: "Juan Pablo lidera producto en Platzi y enseña cómo diseñar prompts efectivos para sacarle el máximo provecho a los modelos de lenguaje en proyectos reales."
-      },
-      {
-        name: "Tomas Zuleta",
-        role: "Frontend Lead en Rocketly",
-        bg: "linear-gradient(135deg, #34e39a, #0f7a4d)",
-        iconBg: "#6366f1",
-        icon: "💻",
-        courseTitle: "Curso de React Avanzado",
-        bio: "Laura tiene más de 8 años liderando equipos de frontend, construyendo interfaces escalables y mentoreando desarrolladores en buenas prácticas de React."
-      }
-    ];
+const teachersData = [
+  {
+    name: "Ana Maria Mesa",
+    role: "Learning Specialist en Endaca",
+    photoUrl: "images/ana.jpg",
+    bg: "linear-gradient(135deg, #a56de2, #e6a8d7)",
+    iconBg: "#ec4899",
+    icon: "💬",
+    courseTitle: "Curso Gratis de Estrategias para el Aprendizaje",
+
+  },
+  {
+    name: "Laura Sofia Ulloa",
+    role: "Senior Solutions Engineer en N8N",
+    photoUrl: "images/sofia.jpg",
+    bg: "linear-gradient(135deg, #f5a623, #f7c948)",
+    iconBg: "#22c55e",
+    icon: "🤖",
+    courseTitle: "Curso de Automatizaciones con IA",
+
+  },
+  {
+    name: "Mariana Cardona",
+    role: "Especialista en IA",
+    photoUrl: "images/mariana.png ",
+    bg: "linear-gradient(135deg, #7dd3fc, #bae6fd)",
+    iconBg: "#f97316",
+    icon: "📊",
+    courseTitle: "Curso de Ciencia de Datos para Análisis de Negocio",
+   
+  },
+  {
+    name: "Didier Londoño",
+    role: "CPO en Platzi",
+    photoUrl: "images/didier.jpeg",
+    bg: "linear-gradient(135deg, #fde8d7, #fff1e6)",
+    iconBg: "#14b8a6",
+    icon: "✍️",
+    courseTitle: "Curso de Prompt Engineering",
+    
+  },
+  {
+    name: "Tomas Zuleta",
+    role: "Frontend Lead en Rocketly",
+    photoUrl: "images/tomas.jpeg",
+    bg: "linear-gradient(135deg, #34e39a, #0f7a4d)",
+    iconBg: "#6366f1",
+    icon: "💻",
+    courseTitle: "Curso de React Avanzado",
+    bio: "..."
+  }
+];
  
     const grid = document.getElementById("teachersGrid");
  
@@ -132,7 +137,9 @@
       card.type = "button";
       card.setAttribute("aria-haspopup", "dialog");
       card.innerHTML = `
-        <div class="teacher-photo" style="background:${teacher.bg}">${personIcon}</div>
+        <div class="teacher-photo" style="background:${teacher.bg}">
+          ${teacher.photoUrl ? `<img src="${teacher.photoUrl}" alt="${teacher.name}" class="teacher-img">` : personIcon}
+        </div>
         <div class="teacher-info">
           <h3>${teacher.name}</h3>
           <p class="role">${teacher.role}</p>
@@ -159,8 +166,13 @@
  
     function openModal(index) {
       const t = teachersData[index];
-      modalPhoto.style.background = t.bg;
-      modalPhoto.innerHTML = personIcon;
+      if (t.photoUrl) {
+        modalPhoto.style.background = 'none';
+        modalPhoto.innerHTML = `<img src="${t.photoUrl}" alt="${t.name}" class="modal-img">`;
+      } else {
+        modalPhoto.style.background = t.bg;
+        modalPhoto.innerHTML = personIcon;
+      }
       modalName.textContent = t.name;
       modalRole.textContent = t.role;
       modalBio.textContent = t.bio;
