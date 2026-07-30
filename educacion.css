@@ -1,14 +1,19 @@
 ﻿:root {
   color-scheme: dark;
-  --bg: #0d1116;
+  --bg-dark: #0d1117;
+  --bg: var(--bg-dark);
   --bg-header: rgba(8, 14, 20, 0.96);
+  --bg-hero-start: #0d1117;
+  --bg-hero-end: #0f2b23;
   --border-subtle: rgba(255,255,255,.06);
   --surface: #111820;
   --surface-strong: #16222d;
-  --text: #f8fafb;
-  --muted: #9bb1be;
-  --green: #1fd477;
+  --text-primary: #f5f6f8;
+  --text-secondary: #b6bdc9;
+  --text-muted: #8b93a1;
+  --green: #33d6a6;
   --green-soft: #13543f;
+  --green-bright: #35e0ac;
   --border: rgba(255,255,255,0.08);
   --shadow: 0 30px 80px rgba(0,0,0,.26);
 }
@@ -21,10 +26,8 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, rgba(31,212,119,.16), transparent 28%),
-              radial-gradient(circle at 100% 10%, rgba(15,176,255,.2), transparent 18%),
-              var(--bg);
-  color: var(--text);
+  background: radial-gradient(ellipse at top, var(--bg-hero-end) 0%, var(--bg-hero-start) 55%);
+  color: var(--text-primary);
 }
 
 .header {
@@ -159,7 +162,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1fd477 0%, #10b06e 100%);
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-bright) 100%);
   color: #02110a;
   padding: 14px 24px;
   border-radius: 999px;

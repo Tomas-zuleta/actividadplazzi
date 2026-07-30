@@ -1,20 +1,26 @@
 :root {
-  --bg-dark: #0b1418;
-  --bg-darker: #08100f;
-  --green: #22c55e;
-  --green-bright: #34e39a;
+  --bg-dark: #0d1117;
+  --bg-darker: #12151c;
+  --bg-header: #12151c;
+  --bg-hero-start: #0d1117;
+  --bg-hero-end: #0f2b23;
+  --green: #33d6a6;
+  --green-bright: #35e0ac;
+  --text-primary: #f5f6f8;
+  --text-white: var(--text-primary);
+  --text-secondary: #b6bdc9;
+  --text-muted: #8b93a1;
   --teal: #12c9c9;
-  --text-white: #ffffff;
-  --text-muted: #b9c2c4;
   --border-color: rgba(255,255,255,0.08);
+  --section-bg: radial-gradient(ellipse at top, var(--bg-hero-end) 0%, var(--bg-hero-start) 55%);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-white);
+  background: radial-gradient(ellipse at top, var(--bg-hero-end) 0%, var(--bg-hero-start) 55%);
+  color: var(--text-primary);
 }
 
 /* ---------- NAVBAR ---------- */
@@ -35,7 +41,7 @@ header.navbar {
   gap: 8px;
   font-size: 22px;
   font-weight: 700;
-  color: var(--text-white);
+  color: var(--text-primary);
   flex-shrink: 0;
   text-decoration: none;
 }
@@ -47,7 +53,7 @@ header.navbar {
   max-width: 480px;
   display: flex;
   align-items: center;
-  background: #111c1f;
+  background: #05060a;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 10px 16px;
@@ -63,7 +69,7 @@ header.navbar {
   width: 100%;
 }
 
-.search-bar input::placeholder { color: #7c8a8d; }
+.search-bar input::placeholder { color: var(--text-muted); }
 
 .search-bar svg { flex-shrink: 0; opacity: 0.6; width: 16px; height: 16px; }
 
@@ -74,7 +80,7 @@ nav.links {
 }
 
 nav.links a {
-  color: var(--text-white);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -85,7 +91,7 @@ nav.links a:hover { color: var(--green-bright); }
 
 .btn-acceder {
   background: var(--green-bright);
-  color: #06231a;
+  color: #05130f;
   padding: 10px 22px;
   border-radius: 8px;
   font-weight: 700;
@@ -120,7 +126,7 @@ nav.links a:hover { color: var(--green-bright); }
 }
 
 .hero h1 .accent {
-  color: var(--teal);
+  color: var(--green-bright);
 }
 
 .hero p.subtitle {
@@ -178,7 +184,7 @@ nav.links a:hover { color: var(--green-bright); }
 
 /* ---------- COLABORADORES / EMPRESAS ---------- */
 .collaborators {
-  background: var(--bg-darker);
+  background: var(--section-bg);
   padding: 48px 24px;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -226,7 +232,7 @@ nav.links a:hover { color: var(--green-bright); }
 /* ---------- PROFESORES / COLABORADORES ---------- */
 .teachers {
   padding: 56px 40px 64px;
-  background: linear-gradient(135deg, #0a3d2e 0%, #128a57 55%, #0f7a4d 100%);
+  background: var(--section-bg);
 }
 
 .teachers .teachers-header {
@@ -245,12 +251,12 @@ nav.links a:hover { color: var(--green-bright); }
 
 .teachers-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
 .teacher-card {
-  background: #0d2a20;
+  background: #161b22;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -272,13 +278,15 @@ nav.links a:hover { color: var(--green-bright); }
 
 .teacher-photo {
   width: 100%;
-  aspect-ratio: 4 / 4.3;
+  aspect-ratio: 4 / 3;
+  max-height: 320px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.teacher-photo svg { width: 55%; height: 55%; opacity: 0.9; }
+.teacher-photo svg { width: 52%; height: 52%; opacity: 0.9; }
 
 /* Imagen en la card: llena el contenedor y recorta */
 .teacher-photo img {
