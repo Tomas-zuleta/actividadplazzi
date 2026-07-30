@@ -1,15 +1,18 @@
 :root{
-    --platzi-green:#0ECF7B;
-    --platzi-green-dark:#0a3d2e;
-    --panel-green-top:#0f2f26;
-    --panel-green-bottom:#02110d;
-    --bg-black:#0b0b0b;
-    --promo-dark:#241209;
-    --text-white:#ffffff;
-    --text-muted:#c9c9c9;
-    --input-bg:#0e0e0e;
-    --input-border:#3a3a3a;
-  }
+    --bg-dark: #0d1117;
+    --bg-header: #12151c;
+    --bg-hero-start: #0d1117;
+    --bg-hero-end: #0f2b23;
+    --green: #33d6a6;
+    --green-bright: #35e0ac;
+    --text-primary: #f5f6f8;
+    --text-secondary: #b6bdc9;
+    --text-muted: #8b93a1;
+    --input-bg: #05060a;
+    --input-border: #232834;
+    --panel-green-top: #0f2f26;
+    --panel-green-bottom: #02110d;
+}
 
   *{ box-sizing:border-box; }
 
@@ -17,8 +20,8 @@
     margin:0;
     padding:0;
     font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    background:var(--bg-black);
-    color:var(--text-white);
+    background: radial-gradient(ellipse at top, var(--bg-hero-end) 0%, var(--bg-hero-start) 55%);
+    color:var(--text-primary);
     height:100%;
   }
 
@@ -27,9 +30,7 @@
     width:100%;
     height:100vh;
     overflow:hidden;
-    background:
-      radial-gradient(ellipse at 10% 30%, rgba(255,90,20,0.18), transparent 55%),
-      var(--bg-black);
+    background: radial-gradient(ellipse at top, var(--bg-hero-end) 0%, var(--bg-hero-start) 55%);
   }
 
   /* ---------- Top navbar ---------- */
@@ -49,7 +50,7 @@
     font-family:"Sora", sans-serif;
     font-weight:700;
     font-size:20px;
-    color:var(--platzi-green);
+    color:var(--green);
     letter-spacing:0.2px;
   }
   .logo svg{ width:22px; height:22px; }
@@ -60,11 +61,11 @@
     display:flex;
     align-items:center;
     gap:10px;
-    background:#141414;
-    border:1px solid #2a2a2a;
+    background:#05060a;
+    border:1px solid var(--input-border);
     border-radius:8px;
     padding:9px 14px;
-    color:#9a9a9a;
+    color:var(--text-muted);
     font-size:14px;
   }
 
@@ -73,7 +74,7 @@
     gap:28px;
     margin-left:auto;
     font-size:14px;
-    color:#d4d4d4;
+    color:var(--text-primary);
   }
 
   /* ---------- Hero / promo section behind panel ---------- */
@@ -81,10 +82,7 @@
     position:absolute;
     inset:0;
     top:64px;
-    background:
-      linear-gradient(90deg, rgba(30,10,0,0.85) 0%, rgba(20,8,4,0.55) 45%, transparent 70%),
-      repeating-linear-gradient(135deg, #150806 0 40px, #1c0b07 40px 80px),
-      var(--promo-dark);
+    background: radial-gradient(ellipse at top, var(--bg-hero-end) 0%, var(--bg-hero-start) 55%);
   }
 
   .promo-content{
@@ -223,7 +221,7 @@
     font-family:"Sora", sans-serif;
     font-size:24px;
     font-weight:700;
-    color:var(--platzi-green);
+    color:var(--green);
     margin:48px 0 34px 0;
   }
   .panel-logo svg{ width:26px; height:26px; }
@@ -241,7 +239,7 @@
     margin-bottom:28px;
   }
   .panel-subtitle a{
-    color:var(--platzi-green);
+    color:var(--green);
     font-weight:700;
     text-decoration:underline;
   }
@@ -259,12 +257,15 @@
   .email-input::placeholder{ color:#8f8f8f; }
   .email-input:focus{
     outline:none;
-    border-color:var(--platzi-green);
+    border-color: var(--green);
   }
 
   .continue-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     width:100%;
-    background:var(--platzi-green);
+    background:var(--green);
     color:#062017;
     font-weight:700;
     font-size:16px;
@@ -273,6 +274,7 @@
     border-radius:6px;
     cursor:pointer;
     margin-bottom:26px;
+    text-align:center;
   }
   .continue-btn:hover{ filter:brightness(1.05); }
 
@@ -317,7 +319,7 @@
     line-height:1.6;
   }
   .panel-footer a{
-    color:var(--platzi-green);
+    color:var(--green);
     font-weight:700;
     text-decoration:none;
   }
