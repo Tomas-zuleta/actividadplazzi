@@ -280,6 +280,14 @@ nav.links a:hover { color: var(--green-bright); }
 
 .teacher-photo svg { width: 55%; height: 55%; opacity: 0.9; }
 
+/* Imagen en la card: llena el contenedor y recorta */
+.teacher-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .teacher-info {
   padding: 16px 16px 14px;
 }
@@ -394,6 +402,14 @@ nav.links a:hover { color: var(--green-bright); }
 }
 
 .modal-photo svg { width: 40%; height: 40%; opacity: 0.9; }
+
+/* Imagen dentro del modal */
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .modal-content {
   padding: 24px 28px 30px;
